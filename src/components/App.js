@@ -59,11 +59,13 @@ const App = () => {
     <div id="main">
       <h1 id="heading">Calendar</h1>
       <input
+        id="year-text-box"
         type="text"
         value={year_month.year}
         onChange={(e) => setYear_Month({ ...year_month, year: e.target.value })}
       ></input>
       <select
+        id="month"
         value={months[year_month.month]}
         onChange={(e) =>
           setYear_Month({ ...year_month, month: e.target.value })
@@ -97,24 +99,28 @@ const App = () => {
       <div>
         <span>
           <button
+            id="previous-year"
             type="button"
             onClick={() => handleButtons("prev-year")}
           >{`<<`}</button>
         </span>
         <span>
           <button
+            id="previous-month"
             type="button"
             onClick={() => handleButtons("prev-month")}
           >{`<`}</button>
         </span>
         <span>
           <button
+            id="next-month"
             type="button"
             onClick={() => handleButtons("next-month")}
           >{`>`}</button>
         </span>
         <span>
           <button
+            id="next-year"
             type="button"
             onClick={() => handleButtons("next-year")}
           >{`>>`}</button>
